@@ -1,4 +1,5 @@
 import NavbarMobile from "./navbarMobile";
+import Footer from "./footer";
 import { Container } from "@chakra-ui/react";
 
 export default function Layout({ children }) {
@@ -6,6 +7,7 @@ export default function Layout({ children }) {
     <Container bg="red.300" maxW="full" minH="100vh">
       <NavbarMobile />
       <main>{children}</main>
+      <Footer />
     </Container>
   );
 }

@@ -123,6 +123,44 @@ function AboutManageList({ items }) {
   );
 }
 
+// TODO -  add a slider to change between the four users components
+function Testimonials({}) {
+  return (
+    <chakra.section>
+      <Heading as="h2" size="lg" mb={4}>
+        What they've said
+      </Heading>
+      <Flex justify="center">
+        <Image
+          src="/images/avatar-ali.png"
+          alt="user images"
+          width={50}
+          height={50}
+        />
+      </Flex>
+      <Heading as="h5" size="xs" textAlign="center">
+        Ali Bravo
+      </Heading>
+      <Flex justify="center">
+        <Button borderRadius={40}>Get Started</Button>
+      </Flex>
+    </chakra.section>
+  );
+}
+
+function SimplifyBox() {
+  return (
+    <chakra.section>
+      <Heading as="h2" size="lg">
+        Simplify how your team works today.
+      </Heading>
+      <Flex justify="center">
+        <Button borderRadius={40}>Get Started</Button>
+      </Flex>
+    </chakra.section>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -135,6 +173,8 @@ export default function Home() {
       <Stats />
       <GetStarted />
       <AboutManage />
+      <Testimonials />
+      <SimplifyBox />
     </>
   );
 }
