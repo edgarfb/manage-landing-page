@@ -1,20 +1,14 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import {
-  Container,
   Stack,
-  VStack,
-  HStack,
   Flex,
   Box,
-  Spacer,
-  Grid,
-  GridItem,
   chakra,
   Heading,
   Text,
   Button,
-  Progress,
+  Image,
 } from "@chakra-ui/react";
 
 const items = [
@@ -40,19 +34,9 @@ const items = [
 
 function Stats() {
   return (
-    <chakra.section>
-      <Flex justify="center" gap={4} mb={4}>
-        <Box w={100} h={100} bg="blue.100">
-          box 1
-        </Box>
-        <Box w={100} h={100} bg="blue.200">
-          box 2
-        </Box>
-      </Flex>
-      <Flex justify="center" gap={4} mb={4}>
-        <Box w={100} h={100} bg="blue.500">
-          box 3
-        </Box>
+    <chakra.section position="relative" zIndex={100} p={4}>
+      <Flex>
+        <Image src="/images/illustration-intro.svg" alt="" />
       </Flex>
     </chakra.section>
   );
@@ -60,8 +44,8 @@ function Stats() {
 
 function GetStarted() {
   return (
-    <chakra.section>
-      <Heading as="h2" size="lg" mb={4}>
+    <chakra.section p={4}>
+      <Heading as="h1" textAlign="center" mb={4}>
         Bring everyone together to build better products.
       </Heading>
       <Text>
@@ -69,7 +53,15 @@ function GetStarted() {
         keeping the larger team goals in view.
       </Text>
       <Flex justify="center">
-        <Button variantColor="blue" mt={4}>
+        <Button
+          boxShadow="lg"
+          my={4}
+          bg="orange.500"
+          color="white"
+          py={2}
+          px={6}
+          borderRadius={40}
+        >
           Get Started
         </Button>
       </Flex>
@@ -79,34 +71,43 @@ function GetStarted() {
 
 function AboutManage() {
   return (
-    <chakra.section>
-      <Heading as="h2" size="lg" mb={4}>
-        What's different about Manage?
-      </Heading>
-      <Text>
-        Manage provides all the functionality ypur team needs, without the
-        complexity. Our software is tailor-made for modern digital product
-        teams.
-      </Text>
-
+    <>
+      <chakra.section p={4}>
+        <Heading as="h2" size="lg" mb={4} textAlign="center">
+          What's different about Manage?
+        </Heading>
+        <Text>
+          Manage provides all the functionality ypur team needs, without the
+          complexity. Our software is tailor-made for modern digital product
+          teams.
+        </Text>
+      </chakra.section>
       <AboutManageList items={items} />
-    </chakra.section>
+    </>
   );
 }
 
 function AboutManageList({ items }) {
   return (
-    <chakra.ul>
+    <chakra.ul width="100%" pl={4}>
       {items.map((item) => {
         return (
-          <chakra.li listStyleType="none">
+          <chakra.li listStyleType="none" mb={8}>
             <Stack>
-              <Heading as="h4" size="xs">
+              <Heading
+                as="h4"
+                size="xs"
+                bg="gray.100"
+                py={2}
+                borderRadius={40}
+                borderRightRadius={0}
+              >
                 <chakra.span
-                  bg="orange.600"
+                  bg="orange.500"
                   color="white"
                   py={2}
                   px={6}
+                  mr={2}
                   borderRadius={40}
                   fontSize="md"
                 >
@@ -127,7 +128,7 @@ function AboutManageList({ items }) {
 function Testimonials({}) {
   return (
     <chakra.section>
-      <Heading as="h2" size="lg" mb={4}>
+      <Heading as="h2" size="lg" mb={8} textAlign="center">
         What they've said
       </Heading>
       <Flex justify="center">
@@ -138,11 +139,18 @@ function Testimonials({}) {
           height={50}
         />
       </Flex>
-      <Heading as="h5" size="xs" textAlign="center">
+      <Heading as="h5" size="xs" my={6} textAlign="center">
         Ali Bravo
       </Heading>
+      <Text textAlign="center" color="gray.500" p={4}>
+        &quot;We have been able to cancel so many other subscriptions since
+        using Manage. There is no more cross-channel confusion and eeriyone is
+        much more focused.&quot;
+      </Text>
       <Flex justify="center">
-        <Button borderRadius={40}>Get Started</Button>
+        <Button borderRadius={40} bg="orange.500" color="white">
+          Get Started
+        </Button>
       </Flex>
     </chakra.section>
   );
@@ -150,12 +158,23 @@ function Testimonials({}) {
 
 function SimplifyBox() {
   return (
-    <chakra.section>
-      <Heading as="h2" size="lg">
+    <chakra.section
+      py={16}
+      px={4}
+      bg="orange.500"
+      mt={8}
+      display="flex"
+      justifyContent="center"
+      flexDirection="column"
+      alignItems="center"
+    >
+      <Heading as="h2" size="lg" fontSize="40" textAlign="center" color="white">
         Simplify how your team works today.
       </Heading>
       <Flex justify="center">
-        <Button borderRadius={40}>Get Started</Button>
+        <Button borderRadius={40} mt={4} color="orange.600">
+          Get Started
+        </Button>
       </Flex>
     </chakra.section>
   );
