@@ -45,7 +45,7 @@ function Stats() {
 function GetStarted() {
   return (
     <chakra.section p={4}>
-      <Heading as="h1" textAlign="center" mb={4}>
+      <Heading as="h1" textAlign="center" mb={4} color="brand.DarkBlue">
         Bring everyone together to build better products.
       </Heading>
       <Text>
@@ -73,7 +73,7 @@ function AboutManage() {
   return (
     <>
       <chakra.section p={4}>
-        <Heading as="h2" size="lg" mb={4} textAlign="center">
+        <Heading as="h2" size="lg" mb={4} color="brand.DarkBlue">
           What's different about Manage?
         </Heading>
         <Text>
@@ -97,13 +97,13 @@ function AboutManageList({ items }) {
               <Heading
                 as="h4"
                 size="xs"
-                bg="gray.100"
+                bg="brand.VeryPaleRed"
                 py={2}
                 borderRadius={40}
                 borderRightRadius={0}
               >
                 <chakra.span
-                  bg="orange.500"
+                  bg="brand.BrightRed"
                   color="white"
                   py={2}
                   px={6}
@@ -128,7 +128,13 @@ function AboutManageList({ items }) {
 function Testimonials({}) {
   return (
     <chakra.section>
-      <Heading as="h2" size="lg" mb={8} textAlign="center">
+      <Heading
+        as="h2"
+        size="lg"
+        mb={8}
+        textAlign="center"
+        color="brand.DarkBlue"
+      >
         What they've said
       </Heading>
       <Flex justify="center">
@@ -148,7 +154,7 @@ function Testimonials({}) {
         much more focused.&quot;
       </Text>
       <Flex justify="center">
-        <Button borderRadius={40} bg="orange.500" color="white">
+        <Button borderRadius={40} bg="brand.BrightRed" color="white">
           Get Started
         </Button>
       </Flex>
@@ -161,7 +167,7 @@ function SimplifyBox() {
     <chakra.section
       py={16}
       px={4}
-      bg="orange.500"
+      bg="brand.BrightRed"
       mt={8}
       display="flex"
       justifyContent="center"
@@ -172,9 +178,23 @@ function SimplifyBox() {
         Simplify how your team works today.
       </Heading>
       <Flex justify="center">
-        <Button borderRadius={40} mt={4} color="orange.600">
+        <Button
+          borderRadius={40}
+          mt={4}
+          bg="white"
+          color="brand.BrightRed"
+          fontSize=".8rem"
+        >
           Get Started
         </Button>
+        <Flex bg="gray.300">
+          <Box bg="brand.BrightRed" width={30} height={30}></Box>
+          <Box bg="brand.DarkBlue" width={30} height={30}></Box>
+          <Box bg="brand.DarkGrayishBlue" width={30} height={30}></Box>
+          <Box bg="brand.VeryDarkBlue" width={30} height={30}></Box>
+          <Box bg="brand.VeryPaleRed" width={30} height={30}></Box>
+          <Box bg="brand.VaryLightGray" width={30} height={30}></Box>
+        </Flex>
       </Flex>
     </chakra.section>
   );

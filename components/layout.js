@@ -1,26 +1,23 @@
 import NavbarMobile from "./navbarMobile";
 import Footer from "./footer";
-import { chakra, Container, Box, Flex } from "@chakra-ui/react";
+import { Container, Box } from "@chakra-ui/react";
 import Image from "next/image";
 
 function BgPattern() {
   return (
     <Box
-      width={300}
-      height={300}
+      width="400px"
+      height="400px"
       position="absolute"
-      top="-50"
-      right="-10"
+      top="-3%"
+      left="11%"
       overflow="hidden"
       zIndex={1}
-    >
-      <Image
-        src="/images/bg-tablet-pattern.svg"
-        width={300}
-        height={300}
-        alt=""
-      />
-    </Box>
+      backgroundImage="url('/images/bg-tablet-pattern.svg')"
+      backgroundPosition={["center", "center"]}
+      backgroundSize="contain"
+      bgRepeat="no-repeat"
+    ></Box>
   );
 }
 
