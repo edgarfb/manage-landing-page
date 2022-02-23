@@ -25,6 +25,7 @@ export default function Layout({ children }) {
   return (
     <Container
       bg="white"
+      minW="320px"
       maxW="full"
       minH="100vh"
       p={0}

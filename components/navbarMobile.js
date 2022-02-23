@@ -1,5 +1,6 @@
 import { chakra, Box } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
+import Logo from "./logo";
 
 export default function NavbarMobile() {
   return (
@@ -13,7 +14,7 @@ export default function NavbarMobile() {
       width="full"
       zIndex={100}
     >
-      <Image src="/images/logo.svg" alt="" />
+      <Logo />
       <Image src="/images/icon-hamburger.svg" alt="" zIndex={100} />
     </chakra.nav>
   );

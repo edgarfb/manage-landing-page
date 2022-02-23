@@ -61,6 +61,7 @@ function GetStarted() {
           py={2}
           px={6}
           borderRadius={40}
+          fontSize=".8rem"
         >
           Get Started
         </Button>
@@ -96,7 +97,7 @@ function AboutManageList({ items }) {
             <Stack>
               <Heading
                 as="h4"
-                size="xs"
+                fontSize=".8rem"
                 bg="brand.VeryPaleRed"
                 py={2}
                 borderRadius={40}
@@ -109,7 +110,7 @@ function AboutManageList({ items }) {
                   px={6}
                   mr={2}
                   borderRadius={40}
-                  fontSize="md"
+                  fontSize=".8rem"
                 >
                   {item.id}
                 </chakra.span>
@@ -145,16 +146,27 @@ function Testimonials({}) {
           height={50}
         />
       </Flex>
-      <Heading as="h5" size="xs" my={6} textAlign="center">
+      <Heading
+        as="h5"
+        size="xs"
+        my={6}
+        textAlign="center"
+        color="brand.DarkBlue"
+      >
         Ali Bravo
       </Heading>
-      <Text textAlign="center" color="gray.500" p={4}>
+      <Text textAlign="center" fontSize=".8rem" color="gray.500" p={8}>
         &quot;We have been able to cancel so many other subscriptions since
         using Manage. There is no more cross-channel confusion and eeriyone is
         much more focused.&quot;
       </Text>
       <Flex justify="center">
-        <Button borderRadius={40} bg="brand.BrightRed" color="white">
+        <Button
+          borderRadius={40}
+          fontSize=".8rem"
+          bg="brand.BrightRed"
+          color="white"
+        >
           Get Started
         </Button>
       </Flex>
@@ -174,7 +186,13 @@ function SimplifyBox() {
       flexDirection="column"
       alignItems="center"
     >
-      <Heading as="h2" size="lg" fontSize="40" textAlign="center" color="white">
+      <Heading
+        as="h2"
+        fontWeight={500}
+        fontSize="40"
+        textAlign="center"
+        color="white"
+      >
         Simplify how your team works today.
       </Heading>
       <Flex justify="center">
@@ -187,14 +205,6 @@ function SimplifyBox() {
         >
           Get Started
         </Button>
-        <Flex bg="gray.300">
-          <Box bg="brand.BrightRed" width={30} height={30}></Box>
-          <Box bg="brand.DarkBlue" width={30} height={30}></Box>
-          <Box bg="brand.DarkGrayishBlue" width={30} height={30}></Box>
-          <Box bg="brand.VeryDarkBlue" width={30} height={30}></Box>
-          <Box bg="brand.VeryPaleRed" width={30} height={30}></Box>
-          <Box bg="brand.VaryLightGray" width={30} height={30}></Box>
-        </Flex>
       </Flex>
     </chakra.section>
   );
