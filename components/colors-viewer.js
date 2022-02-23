@@ -1,5 +1,5 @@
 import { Flex, Box } from "@chakra-ui/react";
-
+// hi there
 export default function ColorViewer() {
   return (
     <Flex bg="gray.300">
