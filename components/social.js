@@ -7,6 +7,7 @@ export default function Social({ socialItems }) {
         {socialItems.map((item) => {
           return (
             <Box
+              key={item.id}
               as="a"
               href={item.url}
               target="_blank"

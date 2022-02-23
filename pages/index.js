@@ -75,7 +75,7 @@ function AboutManage() {
     <>
       <chakra.section p={4}>
         <Heading as="h2" size="lg" mb={4} color="brand.DarkBlue">
-          What's different about Manage?
+          What&apos;s different about Manage?
         </Heading>
         <Text>
           Manage provides all the functionality ypur team needs, without the
@@ -93,7 +93,7 @@ function AboutManageList({ items }) {
     <chakra.ul width="100%" pl={4}>
       {items.map((item) => {
         return (
-          <chakra.li listStyleType="none" mb={8}>
+          <chakra.li key={item.id} listStyleType="none" mb={8}>
             <Stack>
               <Heading
                 as="h4"
