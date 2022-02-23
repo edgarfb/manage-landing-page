@@ -2,7 +2,7 @@ const socialItems = [
   {
     id: 1,
     name: "Facebook",
-    url: "https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQ1NTc5NjQxLCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D",
+    url: "https://www.facebook.com",
     icon: "/images/icon-facebook.svg",
   },
   {
