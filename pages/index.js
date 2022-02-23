@@ -136,7 +136,7 @@ function Testimonials({}) {
         textAlign="center"
         color="brand.DarkBlue"
       >
-        What they've said
+        What they&apos;ve said
       </Heading>
       <Flex justify="center">
         <Image
