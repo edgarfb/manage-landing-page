@@ -3,8 +3,8 @@ import AboutManage from "../components/about-manage";
 import AboutManageList from "../components/about-manage-list";
 import Stats from "../components/stats";
 import GetStarted from "../components/get-started";
-import Testimonials from "../components/testimonials";
 import SimplifyBox from "../components/simplefy-box";
+import Slider from "../components/slider";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
       <GetStarted />
       <AboutManage />
       <AboutManageList />
-      <Testimonials />
+      <Slider />
       <SimplifyBox />
     </>
   );
