@@ -28,6 +28,7 @@ export default function Footer() {
 
       <Flex
         color="brand.DarkGrayishBlue"
+        fontWeight="700"
         justify="center"
         gap={12}
         fontSize=".8rem"
