@@ -1,5 +1,6 @@
 import { Flex, Heading, Text, Button, Image, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import GetStartedLink from "../components/get-started-link";
 
 const MotionBox = motion(Box);
 
@@ -49,14 +50,7 @@ export default function Testimonials({ userData }) {
         </Text>
       </MotionBox>
       <Flex justify="center">
-        <Button
-          borderRadius={40}
-          fontSize=".8rem"
-          bg="brand.BrightRed"
-          color="white"
-        >
-          Get Started
-        </Button>
+        <GetStartedLink />
       </Flex>
     </Box>
   );
