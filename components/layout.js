@@ -2,16 +2,15 @@ import { useState } from "react";
 import NavbarMobile from "./navbarMobile";
 import Footer from "./footer";
 import { chakra, Container, Box } from "@chakra-ui/react";
-import Image from "next/image";
 
 function BgPattern() {
   return (
     <Box
-      width="400px"
-      height="400px"
+      width={{ base: "400px", lg: "600px" }}
+      height={{ base: "400px", lg: "600px" }}
       position="absolute"
-      top="-3%"
-      left="11%"
+      top={{ base: "-3%", lg: "-7%" }}
+      right={{ base: "-30%", lg: "-13%" }}
       overflow="hidden"
       zIndex={1}
       backgroundImage="url('/images/bg-tablet-pattern.svg')"

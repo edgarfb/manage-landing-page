@@ -1,11 +1,12 @@
 import Testimonials from "./testimonials";
 import { useEffect, useState } from "react";
 import testimonialData from "./testimonials-data.js";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import GetStartedLink from "../components/get-started-link";
 
 function Dot({ onClick, bg }) {
   // It will get the background color of the dot based on the index of the cuurenSlide
+
   return (
     <Box
       width="10px"
@@ -21,6 +22,7 @@ function Dot({ onClick, bg }) {
 
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const bp = useBreakpointValue({ base: "sm", md: "md" });
 
   useEffect(() => {
     if (currentSlide === testimonialData.length - 1) {
@@ -35,29 +37,33 @@ export default function Slider() {
   }, [currentSlide]);
 
   return (
-    <Box>
-      <Testimonials
-        key={testimonialData[currentSlide].name}
-        userData={testimonialData[currentSlide]}
-      />
+    <>
+      {bp === "sm" && (
+        <Box>
+          <Testimonials
+            key={testimonialData[currentSlide].name}
+            userData={testimonialData[currentSlide]}
+          />
 
-      <Flex justify="center" mt={4}>
-        <Flex gap={1}>
-          {testimonialData.map((user, index) => {
-            return (
-              <Dot
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                // Moment aha! :)
-                bg={currentSlide === index ? "brand.BrightRed" : ""}
-              />
-            );
-          })}
-        </Flex>
-      </Flex>
-      <Flex justify="center">
-        <GetStartedLink />
-      </Flex>
-    </Box>
+          <Flex justify="center" mt={4}>
+            <Flex gap={1}>
+              {testimonialData.map((user, index) => {
+                return (
+                  <Dot
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    // Moment aha! :)
+                    bg={currentSlide === index ? "brand.BrightRed" : ""}
+                  />
+                );
+              })}
+            </Flex>
+          </Flex>
+          <Flex justify="center">
+            <GetStartedLink />
+          </Flex>
+        </Box>
+      )}
+    </>
   );
 }

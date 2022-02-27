@@ -1,6 +1,5 @@
-import { Flex, Heading, Text, Button, Image, Box } from "@chakra-ui/react";
+import { Flex, Heading, Text, Image, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import GetStartedLink from "../components/get-started-link";
 
 const MotionBox = motion(Box);
 
