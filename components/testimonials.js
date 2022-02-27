@@ -49,9 +49,6 @@ export default function Testimonials({ userData }) {
           &quot;{userData.testimonial}&quot;
         </Text>
       </MotionBox>
-      <Flex justify="center">
-        <GetStartedLink />
-      </Flex>
     </Box>
   );
 }

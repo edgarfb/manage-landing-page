@@ -2,6 +2,7 @@ import Testimonials from "./testimonials";
 import { useEffect, useState } from "react";
 import testimonialData from "./testimonials-data.js";
 import { Box, Flex } from "@chakra-ui/react";
+import GetStartedLink from "../components/get-started-link";
 
 function Dot({ onClick, bg }) {
   // It will get the background color of the dot based on the index of the cuurenSlide
@@ -54,6 +55,9 @@ export default function Slider() {
             );
           })}
         </Flex>
+      </Flex>
+      <Flex justify="center">
+        <GetStartedLink />
       </Flex>
     </Box>
   );

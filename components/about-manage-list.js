@@ -35,6 +35,7 @@ export default function AboutManageList() {
                 py={2}
                 borderRadius={40}
                 borderRightRadius={0}
+                fontWeight="700"
               >
                 <chakra.span
                   bg="brand.BrightRed"
@@ -49,7 +50,9 @@ export default function AboutManageList() {
                 </chakra.span>
                 {item.title}
               </Heading>
-              <Text>{item.description}</Text>
+              <Text fontSize={{ base: ".8rem" }} color="brand.DarkGrayishBlue">
+                {item.description}
+              </Text>
             </Stack>
           </chakra.li>
         );

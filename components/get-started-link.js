@@ -7,7 +7,7 @@ export default function GetStartedLink({ white = false }) {
       <Link
         href="/get-started"
         boxShadow="lg"
-        my={4}
+        my={8}
         bg={`${white ? "white" : "brand.BrightRed"}`}
         color={`${white ? "brand.BrightRed" : "white"}`}
         py={2}
