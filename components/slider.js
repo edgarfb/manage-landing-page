@@ -44,7 +44,6 @@ export default function Slider() {
       <Flex justify="center" mt={4}>
         <Flex gap={1}>
           {testimonialData.map((user, index) => {
-            console.log("index", index);
             return (
               <Dot
                 key={index}
