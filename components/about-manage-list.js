@@ -23,7 +23,10 @@ const items = [
 
 export default function AboutManageList() {
   return (
-    <chakra.ul width="100%" pl={4}>
+    <chakra.ul
+      width={{ base: "100%", md: "50%" }}
+      p={{ base: "0 0 0 1rem", md: "1rem" }}
+    >
       {items.map((item) => {
         return (
           <chakra.li key={item.id} listStyleType="none" mb={8}>

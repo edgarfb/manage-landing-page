@@ -4,6 +4,23 @@ import Stats from "../components/stats";
 import GetStarted from "../components/get-started";
 import SimplifyBox from "../components/simplefy-box";
 import Slider from "../components/slider";
+import { chakra } from "@chakra-ui/react";
+
+function Section({ children }) {
+  return (
+    <chakra.section
+      width={{ base: "100%", md: "80%" }}
+      display="flex"
+      flexDirection={{ base: "column-reverse", md: "row" }}
+      m={{ base: "0px", md: "0 auto" }}
+      my={{ base: "0px", md: "2rem" }}
+      justifyContent="center"
+      alignItems="flex-start"
+    >
+      {children}
+    </chakra.section>
+  );
+}
 
 export default function Home() {
   return (
@@ -18,9 +35,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Stats />
-      <GetStarted />
-      <AboutManage />
+      <Section>
+        <GetStarted />
+        <Stats />
+      </Section>
+
+      <Section>
+        <AboutManage />
+      </Section>
+
       <Slider />
       <SimplifyBox />
     </>

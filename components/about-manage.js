@@ -1,13 +1,12 @@
-import { chakra, Heading, Text } from "@chakra-ui/react";
+import { chakra, Heading, Text, Flex } from "@chakra-ui/react";
 import AboutManageList from "./about-manage-list";
 
 export default function AboutManage() {
   return (
     <>
-      <chakra.section p={4}>
+      <Flex p={4} width={{ base: "100%", md: "50%" }} flexDirection="column">
         <Heading
           as="h2"
-          size="lg"
           mb={4}
           color="brand.DarkBlue"
           fontSize={{ base: "1.7rem" }}
@@ -25,7 +24,7 @@ export default function AboutManage() {
           complexity. Our software is tailor-made for modern digital product
           teams.
         </Text>
-      </chakra.section>
+      </Flex>
       <AboutManageList />
     </>
   );
