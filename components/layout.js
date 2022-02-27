@@ -1,6 +1,7 @@
+import { useState } from "react";
 import NavbarMobile from "./navbarMobile";
 import Footer from "./footer";
-import { Container, Box } from "@chakra-ui/react";
+import { chakra, Container, Box } from "@chakra-ui/react";
 import Image from "next/image";
 
 function BgPattern() {
@@ -22,19 +23,25 @@ function BgPattern() {
 }
 
 export default function Layout({ children }) {
+  const [navBg, setNavBg] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Container
       bg="white"
       minW="320px"
       maxW="full"
-      minH="100vh"
+      height={isOpen ? "100vh" : "auto"}
       p={0}
       position="relative"
       overflow="hidden"
     >
-      <NavbarMobile />
+      <NavbarMobile
+        bg={navBg}
+        isOpen={isOpen}
+        onClick={() => setIsOpen(!isOpen)}
+      />
       <BgPattern />
-      <main>{children}</main>
+      <chakra.main>{children}</chakra.main>
       <Footer />
     </Container>
   );

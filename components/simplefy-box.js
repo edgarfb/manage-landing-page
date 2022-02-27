@@ -20,12 +20,12 @@ export default function SimplifyBox() {
         fontSize={{ base: "2.2rem" }}
         textAlign="center"
         color="white"
-        zIndex={100}
+        zIndex={10}
         letterSpacing="-.06rem"
       >
         Simplify how your team works today.
       </Heading>
-      <Flex justify="center" zIndex={100}>
+      <Flex justify="center" zIndex={10}>
         <GetStartedLink white={true} />
       </Flex>
 
