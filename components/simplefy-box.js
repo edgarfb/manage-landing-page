@@ -1,4 +1,5 @@
 import { chakra, Heading, Flex, Button } from "@chakra-ui/react";
+import GetStartedLink from "./get-started-link";
 
 export default function SimplifyBox() {
   return (
@@ -22,15 +23,7 @@ export default function SimplifyBox() {
         Simplify how your team works today.
       </Heading>
       <Flex justify="center">
-        <Button
-          borderRadius={40}
-          mt={4}
-          bg="white"
-          color="brand.BrightRed"
-          fontSize=".8rem"
-        >
-          Get Started
-        </Button>
+        <GetStartedLink white={true} />
       </Flex>
     </chakra.section>
   );

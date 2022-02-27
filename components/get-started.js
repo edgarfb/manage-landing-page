@@ -1,4 +1,5 @@
-import { chakra, Heading, Text, Button, Flex } from "@chakra-ui/react";
+import { chakra, Heading, Text, Flex } from "@chakra-ui/react";
+import GetStartedLink from "./get-started-link";
 
 export default function GetStarted() {
   return (
@@ -11,18 +12,7 @@ export default function GetStarted() {
         keeping the larger team goals in view.
       </Text>
       <Flex justify="center">
-        <Button
-          boxShadow="lg"
-          my={4}
-          bg="orange.500"
-          color="white"
-          py={2}
-          px={6}
-          borderRadius={40}
-          fontSize=".8rem"
-        >
-          Get Started
-        </Button>
+        <GetStartedLink />
       </Flex>
     </chakra.section>
   );

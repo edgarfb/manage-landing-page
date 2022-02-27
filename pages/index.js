@@ -1,6 +1,5 @@
 import Head from "next/head";
 import AboutManage from "../components/about-manage";
-import AboutManageList from "../components/about-manage-list";
 import Stats from "../components/stats";
 import GetStarted from "../components/get-started";
 import SimplifyBox from "../components/simplefy-box";
