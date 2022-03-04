@@ -24,7 +24,7 @@ const items = [
 export default function AboutManageList() {
   return (
     <chakra.ul
-      width={{ base: "100%", md: "50%" }}
+      width={{ base: "100%", md: "45%" }}
       p={{ base: "0 0 0 1rem", md: "1rem" }}
     >
       {items.map((item) => {
@@ -34,7 +34,7 @@ export default function AboutManageList() {
               <Heading
                 as="h4"
                 fontSize=".8rem"
-                bg="brand.VeryPaleRed"
+                bg={{ base: "brand.VeryPaleRed", lg: "white" }}
                 py={2}
                 borderRadius={40}
                 borderRightRadius={0}
@@ -45,7 +45,7 @@ export default function AboutManageList() {
                   color="white"
                   py={2}
                   px={6}
-                  mr={2}
+                  mr={{ base: 2, lg: 6 }}
                   borderRadius={40}
                   fontSize=".8rem"
                 >
@@ -53,7 +53,12 @@ export default function AboutManageList() {
                 </chakra.span>
                 {item.title}
               </Heading>
-              <Text fontSize={{ base: ".8rem" }} color="brand.DarkGrayishBlue">
+              <Text
+                fontSize={{ base: ".8rem", md: "1rem" }}
+                color="brand.DarkGrayishBlue"
+                ml={{ base: 0, lg: "88px !important" }}
+                // ml="88px"
+              >
                 {item.description}
               </Text>
             </Stack>

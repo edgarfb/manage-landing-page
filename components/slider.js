@@ -1,7 +1,7 @@
 import Testimonials from "./testimonials";
 import { useEffect, useState } from "react";
 import testimonialData from "./testimonials-data.js";
-import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue, Heading } from "@chakra-ui/react";
 import GetStartedLink from "../components/get-started-link";
 
 function Dot({ onClick, bg }) {
@@ -38,13 +38,31 @@ export default function Slider() {
 
   return (
     <>
-      {bp === "sm" && (
-        <Box>
+      <Box>
+        <Heading
+          as="h2"
+          size="lg"
+          mb={12}
+          textAlign="center"
+          color="brand.DarkBlue"
+        >
+          What they&apos;ve said
+        </Heading>
+        {bp === "sm" && (
           <Testimonials
             key={testimonialData[currentSlide].name}
             userData={testimonialData[currentSlide]}
           />
+        )}
+        {bp === "md" && (
+          <Flex width="80%" m="0 auto">
+            {testimonialData.slice(0, 3).map((user) => (
+              <Testimonials key={user.name} userData={user} />
+            ))}
+          </Flex>
+        )}
 
+        {bp === "sm" && (
           <Flex justify="center" mt={4}>
             <Flex gap={1}>
               {testimonialData.map((user, index) => {
@@ -59,11 +77,11 @@ export default function Slider() {
               })}
             </Flex>
           </Flex>
-          <Flex justify="center">
-            <GetStartedLink />
-          </Flex>
-        </Box>
-      )}
+        )}
+        <Flex justify="center">
+          <GetStartedLink />
+        </Flex>
+      </Box>
     </>
   );
 }

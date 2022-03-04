@@ -3,9 +3,8 @@ import NextLink from "next/link";
 
 export default function GetStartedLink({ white = false }) {
   return (
-    <NextLink href={"/get-started"} passHref>
+    <NextLink href="https://www.edgarbritez.com/" passHref>
       <Link
-        href="/get-started"
         boxShadow="lg"
         my={8}
         bg={`${white ? "white" : "brand.BrightRed"}`}
@@ -16,6 +15,11 @@ export default function GetStartedLink({ white = false }) {
         fontSize=".8rem"
         fontWeight={600}
         textAlign="center"
+        _hover={{
+          textDecoration: "none",
+          backgroundColor: `${white ? "" : "brand.BrightRedLight"}`,
+          color: `${white ? "brand.BrightRedLight" : "white"}`,
+        }}
       >
         Get Started
       </Link>

@@ -17,7 +17,7 @@ export default function SimplifyBox() {
       <Heading
         as="h2"
         fontWeight="500"
-        fontSize={{ base: "2.2rem" }}
+        fontSize={{ base: "2rem", md: "2.5rem" }}
         textAlign="center"
         color="white"
         zIndex={10}
@@ -29,9 +29,19 @@ export default function SimplifyBox() {
         <GetStartedLink white={true} />
       </Flex>
 
-      <Box position="absolute" width="full" height="full" top="50px">
-        <Image src="/images/bg-simplify-section-mobile.svg" alt="" />
-      </Box>
+      <Box
+        width="full"
+        height="full"
+        position="absolute"
+        top={0}
+        left={0}
+        backgroundImage={{
+          base: "/images/bg-simplify-section-mobile.svg",
+          md: "/images/bg-simplify-section-desktop.svg",
+        }}
+        backgroundSize={{ base: "contain", lg: "cover" }}
+        backgroundRepeat="no-repeat"
+      ></Box>
     </chakra.section>
   );
 }

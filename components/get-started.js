@@ -13,14 +13,14 @@ export default function GetStarted() {
         textAlign={{ base: "center", md: "left" }}
         mb={4}
         color="brand.DarkBlue"
-        fontSize={{ base: "2rem" }}
+        fontSize={{ base: "2rem", md: "2.5rem" }}
       >
         Bring everyone together to build better products.
       </Heading>
       <Text
         color="brand.DarkGrayishBlue"
         textAlign={{ base: "center", md: "left" }}
-        fontSize={{ base: ".9rem" }}
+        fontSize={{ base: ".8rem", md: "1rem" }}
       >
         Manage makes it simple for software teams to plan day-to-day tasks while
         keeping the larger team goals in view.
