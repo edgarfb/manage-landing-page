@@ -13,14 +13,14 @@ export default function Social({ socialItems }) {
               target="_blank"
               rel="noopener noreferrer"
               mr={4}
-              width="30px"
-              height="30px"
+              width={{ base: "30px", lg: "20px" }}
+              height={{ base: "30px", lg: "20px" }}
             >
               <Image
                 src={item.icon}
                 alt={item.name}
-                width="30px"
-                height="30px"
+                width={{ base: "30px", lg: "20px" }}
+                height={{ base: "30px", lg: "20px" }}
               />
             </Box>
           );

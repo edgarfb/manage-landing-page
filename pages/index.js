@@ -9,7 +9,7 @@ import { chakra } from "@chakra-ui/react";
 function Section({ children }) {
   return (
     <chakra.section
-      width={{ base: "100%", md: "80%" }}
+      width={{ base: "100%", lg: "80%" }}
       display="flex"
       flexDirection={{ base: "column-reverse", md: "row" }}
       m={{ base: "0px", md: "0 auto" }}

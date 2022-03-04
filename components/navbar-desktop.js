@@ -12,7 +12,7 @@ export default function NavbarDesktop({ bg }) {
         py={{ base: 8, md: 16 }}
         alignItems="center"
         justifyContent="space-between"
-        width="80%"
+        width={{ md: "100%", lg: "80%" }}
         m="0 auto"
         height="88px"
         zIndex={100}
@@ -23,6 +23,7 @@ export default function NavbarDesktop({ bg }) {
           textAlign="center"
           color="brand.DarkBlue"
           fontWeight="700"
+          fontSize={{ md: "sm", lg: "md" }}
           display="flex"
           justifyContent="space-evenly"
           gap={4}

@@ -55,7 +55,7 @@ export default function Slider() {
           />
         )}
         {bp === "md" && (
-          <Flex width="80%" m="0 auto">
+          <Flex width={{ lg: "80%" }} m="0 auto">
             {testimonialData.slice(0, 3).map((user) => (
               <Testimonials key={user.name} userData={user} />
             ))}

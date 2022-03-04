@@ -9,37 +9,63 @@ export default function Footer() {
     <chakra.footer maxW="full" bg="brand.VeryDarkBlue" p={4}>
       <Flex
         width={{ base: "100%", lg: "80%" }}
-        flexDirection={{ base: "column", lg: "row-reverse" }}
+        flexDirection={{ base: "column", md: "row-reverse" }}
         justify="space-between"
-        alignItems={{ base: "center", lg: "flex-start" }}
+        alignItems={{ base: "center", md: "flex-start" }}
         m="0 auto"
       >
-        <Flex my={8} width="100%">
-          <Input
-            placeholder="Updates in your inbox…"
-            bg="white"
-            fontSize=".8rem"
-            borderRadius={40}
-          />
-          <Button
-            bg="brand.BrightRed"
-            color="white"
-            fontSize=".8rem"
-            ml={4}
-            borderRadius={40}
-            px={8}
+        <Flex
+          my={8}
+          width="100%"
+          flexDirection="column"
+          justifyContent={{ md: "center", lg: "flex-end" }}
+          alignItems={{ md: "flex-start", lg: "flex-start" }}
+        >
+          <Flex
+            width="100%"
+            flexDirection={{ md: "column", lg: "row" }}
+            justify="center"
+            alignItems={{ md: "flex-start", lg: "center" }}
           >
-            Go
-          </Button>
+            <Input
+              placeholder="Updates in your inbox…"
+              bg="white"
+              fontSize=".8rem"
+              borderRadius={40}
+            />
+            <Button
+              bg="brand.BrightRed"
+              color="white"
+              fontSize=".8rem"
+              ml={{ base: 4, md: 0, lg: 4 }}
+              mt={{ base: 0, md: 4, lg: 0 }}
+              borderRadius={40}
+              px={8}
+            >
+              Go
+            </Button>
+          </Flex>
+          <Text
+            mt={4}
+            mb={2}
+            textAlign="center"
+            color="brand.DarkGrayishBlue"
+            fontSize=".6rem"
+            display={{ base: "block" }}
+            width="100%"
+            textAlign={{ base: "left", lg: "right" }}
+          >
+            Copyright 2020. All Rights Reserved
+          </Text>
         </Flex>
 
         <Flex
           color="brand.DarkGrayishBlue"
           fontWeight="700"
           justify="center"
-          gap={{ base: 12, lg: 24 }}
+          gap={{ base: 12, lg: 18 }}
           fontSize=".8rem"
-          m={{ base: 0, lg: 8 }}
+          m={{ base: 0, md: 8 }}
         >
           <chakra.ul listStyleType="none">
             <li>
@@ -67,11 +93,12 @@ export default function Footer() {
             </li>
           </chakra.ul>
         </Flex>
-        <Flex flexDirection={{ base: "column", lg: "column-reverse" }}>
+        <Flex flexDirection={{ base: "column", md: "column-reverse" }}>
           <Social socialItems={socialItems} />
           <Flex
-            justify={{ base: "center", lg: "flex-start" }}
-            m={{ base: 12, lg: 8 }}
+            justify={{ base: "center", md: "flex-start" }}
+            m={{ base: 12, md: 4, lg: 8 }}
+            mt={{ base: 12, md: 8, lg: 8 }}
           >
             <Logo color="white" />
           </Flex>
@@ -83,12 +110,11 @@ export default function Footer() {
           textAlign="center"
           color="brand.DarkGrayishBlue"
           fontSize=".6rem"
-          display={{ base: "block", lg: "none" }}
+          display={{ base: "block", md: "none" }}
         >
           Copyright 2020. All Rights Reserved
         </Text>
 
-        {/* I wondering if this is correct....  */}
         <style jsx>{`
           li {
             margin-bottom: 8px;
