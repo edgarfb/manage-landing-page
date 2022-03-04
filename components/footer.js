@@ -48,10 +48,9 @@ export default function Footer() {
           <Text
             mt={4}
             mb={2}
-            textAlign="center"
             color="brand.DarkGrayishBlue"
             fontSize=".6rem"
-            display={{ base: "block" }}
+            display={{ base: "none", md: "block" }}
             width="100%"
             textAlign={{ base: "left", lg: "right" }}
           >
