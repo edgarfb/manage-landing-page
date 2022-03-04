@@ -4,7 +4,7 @@ import AboutManageList from "./about-manage-list";
 export default function AboutManage() {
   return (
     <>
-      <Flex p={4} width={{ base: "100%", md: "50%" }} flexDirection="column">
+      <Flex p={4} width={{ base: "100%", md: "45%" }} flexDirection="column">
         <Heading
           as="h2"
           mb={4}
@@ -16,7 +16,7 @@ export default function AboutManage() {
           What&apos;s different about Manage?
         </Heading>
         <Text
-          fontSize={{ base: ".8rem" }}
+          fontSize={{ base: ".8rem", md: "1rem" }}
           color="brand.DarkGrayishBlue"
           textAlign="center"
         >

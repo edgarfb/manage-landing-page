@@ -14,7 +14,7 @@ function Section({ children }) {
       flexDirection={{ base: "column-reverse", md: "row" }}
       m={{ base: "0px", md: "0 auto" }}
       my={{ base: "0px", md: "2rem" }}
-      justifyContent="center"
+      justifyContent="space-between"
       alignItems="flex-start"
     >
       {children}

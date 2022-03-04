@@ -12,15 +12,6 @@ export default function Testimonials({ userData }) {
         animate={{ opacity: 1 }}
         transition={800}
       >
-        <Heading
-          as="h2"
-          size="lg"
-          mb={8}
-          textAlign="center"
-          color="brand.DarkBlue"
-        >
-          What they&apos;ve said
-        </Heading>
         <Flex justify="center">
           <Image
             src={userData.image}

@@ -4,6 +4,7 @@ const theme = extendTheme({
   colors: {
     brand: {
       BrightRed: "hsl(12, 88%, 59%)",
+      BrightRedLight: "hsla(12, 88%, 59%, 0.8)",
       DarkBlue: "hsl(228, 39%, 23%)",
       DarkGrayishBlue: "hsl(227, 12%, 61%)",
       VeryDarkBlue: "hsl(233, 12%, 13%)",
