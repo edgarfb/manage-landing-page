@@ -7,6 +7,7 @@ export default function GetStarted() {
       p={4}
       flexDirection={{ base: "column" }}
       width={{ base: "100%", md: "50%" }}
+      zIndex="100"
     >
       <Heading
         as="h1"
