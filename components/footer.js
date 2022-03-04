@@ -62,9 +62,11 @@ export default function Footer() {
           color="brand.DarkGrayishBlue"
           fontWeight="700"
           justify="center"
-          gap={{ base: 12, lg: 18 }}
+          gap={{ base: 12, md: 18, lg: 24 }}
           fontSize=".8rem"
           m={{ base: 0, md: 8 }}
+          ml={{ lg: 12, xl: 24 }}
+          mx={{ xl: 24 }}
         >
           <chakra.ul listStyleType="none">
             <li>
